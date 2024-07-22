@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using OnlineClinic.DoctorServices.Models;
+using OnlineClinic.Appointments.Models;
 
 namespace OnlineClinic.Doctors.Models
 {
@@ -23,5 +24,6 @@ namespace OnlineClinic.Doctors.Models
 
         public virtual List<DoctorService> Services { get; set; }   
 
+        public virtual List<Appointment> Appointments { get; set; }
     }
 }

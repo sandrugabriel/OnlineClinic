@@ -96,13 +96,12 @@ namespace OnlineClinic.Data.Migrations
                 .WithColumn("Start_Time").AsTime().NotNullable()
                 .WithColumn("End_Time").AsTime().NotNullable();
 
-               Create.Table("Appointments")
-                .WithColumn("Id").AsInt32().PrimaryKey().Identity()
-                .WithColumn("CustomerId").AsInt32().ForeignKey("Customers", "Id").NotNullable()
-                .WithColumn("ServiceId").AsInt32().ForeignKey("Services", "Id").NotNullable()
-                .WithColumn("DoctorId").AsInt32().ForeignKey("Doctors", "Id").NotNullable()
-                .WithColumn("TotalAmount").AsDouble().NotNullable()
-                .WithColumn("Appointment_date").AsDateTime().NotNullable();
+            Create.Table("Appointments")
+             .WithColumn("Id").AsInt32().PrimaryKey().Identity()
+             .WithColumn("CustomerId").AsInt32().ForeignKey("Customers", "Id").NotNullable()
+             .WithColumn("ServiceId").AsInt32().ForeignKey("Services", "Id").NotNullable()
+             .WithColumn("DoctorId").AsInt32().ForeignKey("Doctors", "Id").NotNullable()
+             .WithColumn("TotalAmount").AsDouble().NotNullable();
 
                Create.Table("DoctorServices")
                 .WithColumn("Id").AsInt32().PrimaryKey().Identity()
@@ -122,20 +121,13 @@ namespace OnlineClinic.Data.Migrations
             Insert.IntoTable("Services").Row(new { Name = "MRI Scan", Description = "MRI scan for detailed imaging", Time = 60, Price = 300.00 });
             Insert.IntoTable("Services").Row(new { Name = "Physical Therapy Session", Description = "Physical therapy session for rehabilitation", Time = 45, Price = 120.00 });
 
-            Insert.IntoTable("Schedules").Row(new { DoctorId = 1, Day = "Monday", Start_Time = "10:00", End_Time = "17:00" });
-            Insert.IntoTable("Schedules").Row(new { DoctorId = 1, Day = "Thursday", Start_Time = "09:00", End_Time = "18:00" });
-            Insert.IntoTable("Schedules").Row(new { DoctorId = 1, Day = "Wednesday", Start_Time = "09:00", End_Time = "18:00" });
-            Insert.IntoTable("Schedules").Row(new { DoctorId = 1, Day = "Thusday", Start_Time = "09:00", End_Time = "18:00" });
-            Insert.IntoTable("Schedules").Row(new { DoctorId = 1, Day = "Friday", Start_Time = "10:00", End_Time = "16:00" });
-
-            Insert.IntoTable("Appointments").Row(new { CustomerId = 1, ServiceId = 1, DoctorId = 1, TotalAmount = 100.00m, Appointment_date = new DateTime(2024, 7, 25, 10, 0, 0) });
-            Insert.IntoTable("Appointments").Row(new { CustomerId = 2, ServiceId = 2, DoctorId = 2, TotalAmount = 200.00m, Appointment_date = new DateTime(2024, 7, 26, 11, 0, 0) });
+           // Insert.IntoTable("Appointments").Row(new { CustomerId = 1, ServiceId = 1, DoctorId = 1, TotalAmount = 100.00 });
+           // Insert.IntoTable("Appointments").Row(new { CustomerId = 2, ServiceId = 2, DoctorId = 2, TotalAmount = 200.00 });
 
             Insert.IntoTable("DoctorServices").Row(new { ServiceId = 1, DoctorId = 1 });
             Insert.IntoTable("DoctorServices").Row(new { ServiceId = 2, DoctorId = 2 });
             Insert.IntoTable("DoctorServices").Row(new { ServiceId = 3, DoctorId = 1 });
-            Insert.IntoTable("DoctorServices").Row(new { ServiceId = 4, DoctorId = 3 });
-            Insert.IntoTable("DoctorServices").Row(new { ServiceId = 5, DoctorId = 2 });
+            Insert.IntoTable("DoctorServices").Row(new { ServiceId = 4, DoctorId = 2 });
 
         }
 
