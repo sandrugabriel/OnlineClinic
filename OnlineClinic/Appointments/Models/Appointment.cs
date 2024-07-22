@@ -2,8 +2,8 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
-using OnlineClinic.Services.Models;
 using OnlineClinic.Doctors.Models;
+using OnlineClinic.Services.Models;
 
 namespace OnlineClinic.Appointments.Models
 {
@@ -34,8 +34,6 @@ namespace OnlineClinic.Appointments.Models
         [Required]
         public double TotalAmount { get; set; }
 
-        [Required]
-        public DateTime Appointment_date { get; set; }
 
 
     }
