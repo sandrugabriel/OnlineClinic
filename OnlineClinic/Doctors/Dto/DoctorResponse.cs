@@ -17,7 +17,7 @@ namespace OnlineClinic.Doctors.Dto
 
         public string PhoneNumber { get; set; }
 
-        public List<ServiceResponse> Services { get; set; }
+        public List<ServiceResponseForAppointment> Services { get; set; }
 
         public List<AppointmentResponseCustomer> Appointments { get; set; }
     }

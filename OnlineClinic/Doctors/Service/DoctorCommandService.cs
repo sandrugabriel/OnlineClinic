@@ -38,7 +38,7 @@ namespace OnlineClinic.Doctors.Service
                 throw new ItemDoesNotExist(Constants.ItemDoesNotExist);
             }
 
-            if (updateRequest.Name.Equals("") || updateRequest.Name.Equals("string"))
+            if (updateRequest.Name!=null &&( updateRequest.Name.Equals("") || updateRequest.Name.Equals("string")))
             {
                 throw new InvalidName(Constants.InvalidName);
             }

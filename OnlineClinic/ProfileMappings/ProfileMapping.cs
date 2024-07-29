@@ -17,10 +17,12 @@ namespace OnlineClinic.ProfileMappings
         {
             CreateMap<CreateCustomerRequest, Customer>();
             CreateMap<Customer, CustomerResponse>();
+            CreateMap<Customer, CustomerResponseForAppointment>();
             CreateMap<Appointment, AppointmentResponse>();
             CreateMap<Appointment, AppointmentResponseCustomer>();
             CreateMap<CreateDoctorRequest, Doctor>();
-            CreateMap<CreateServiceRequest, Service>();
+            CreateMap<CreateServiceRequest, Service>().ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Descriptions));
+            CreateMap<Service, ServiceResponseForAppointment>().ForMember(dest => dest.Descriptions, opt => opt.MapFrom(src => src.Description));
             CreateMap<Service, ServiceResponse>()
                 .ForMember(dest => dest.Doctors, opt => opt.MapFrom(src => src.Doctors.Select(ds => ds.Doctor)))
                 .ForMember(dest => dest.Descriptions, opt => opt.MapFrom(src => src.Description));
@@ -32,6 +34,7 @@ namespace OnlineClinic.ProfileMappings
                 .ForMember(dest => dest.Descriptions, opt => opt.MapFrom(src => src.Service.Description));
             CreateMap<Doctor, DoctorResponse>()
                 .ForMember(dest => dest.Services, opt => opt.MapFrom(src => src.Services.Select(ds => ds.Service)));
+            CreateMap<Doctor, DoctorResponseForAppointment>();
 
         }
     }

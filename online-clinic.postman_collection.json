@@ -1,0 +1,938 @@
+{
+	"info": {
+		"_postman_id": "ae11f9b6-20f6-4709-a93b-5c8ba9f6f452",
+		"name": "online-clinic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33668461"
+	},
+	"item": [
+		{
+			"name": "Appointment",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerAppointment/All",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerAppointment",
+								"All"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerAppointment/FindById?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerAppointment",
+								"FindById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerCustomer/All",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCustomer",
+								"All"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerCustomer/FindById?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCustomer",
+								"FindById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindByName",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerCustomer/FindByName?name=gabi",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCustomer",
+								"FindByName"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "gabi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"test1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerCustomer/UpdateCustomer?id=3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCustomer",
+								"UpdateCustomer"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerCustomer/DeleteCustomer?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCustomer",
+								"DeleteCustomer"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddAppointment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerCustomer/AddAppointment?id=3&idDoctor=1&nameService=General%20Check-up",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCustomer",
+								"AddAppointment"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								},
+								{
+									"key": "idDoctor",
+									"value": "1"
+								},
+								{
+									"key": "nameService",
+									"value": "General%20Check-up"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAppointment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerCustomer/DeleteAppointment?id=3&idAppointment=6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerCustomer",
+								"DeleteAppointment"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								},
+								{
+									"key": "idAppointment",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Doctor",
+			"item": [
+				{
+					"name": "AllDoctors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerDoctor/All",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerDoctor",
+								"All"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerDoctor/FindById?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerDoctor",
+								"FindById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindByName",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerDoctor/FindByName?name=Dr. Mihai Georgescu",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerDoctor",
+								"FindByName"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Dr. Mihai Georgescu"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"test\",\r\n  \"emailAddress\": \"test23@gmail.com\",\r\n  \"phoneNumber\": \"0543542452\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerDoctor/CreateDoctor",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerDoctor",
+								"CreateDoctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"emailAddress\": \"test1@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerDoctor/UpdateDoctor?id=2\n",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerDoctor",
+								"UpdateDoctor"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerDoctor/DeleteDoctor?id=4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerDoctor",
+								"DeleteDoctor"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Service",
+			"item": [
+				{
+					"name": "AllService",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerService/All",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerService",
+								"All"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTUyOTQsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.fsBmOvtju5F-yE4gP6uSpEBq55s8jET9x2H_7GtLPzo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerService/FindById?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerService",
+								"FindById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FidByName",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTc0MzYsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.zsFeoZ65jENOescYFxUk4h09Kw-T-y0AMmmra_bvWVY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerService/FindByName?name=General%20Check-up",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerService",
+								"FindByName"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "General%20Check-up"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTc0MzYsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.zsFeoZ65jENOescYFxUk4h09Kw-T-y0AMmmra_bvWVY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"test2332\",\r\n  \"descriptions\": \"tesdfsdfsdfs\",\r\n  \"time\": 45,\r\n  \"price\": 70\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerService/CreateService",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerService",
+								"CreateService"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTc0MzYsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.zsFeoZ65jENOescYFxUk4h09Kw-T-y0AMmmra_bvWVY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"test55557\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerService/UpdateService?id=7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerService",
+								"UpdateService"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTc0MzYsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.zsFeoZ65jENOescYFxUk4h09Kw-T-y0AMmmra_bvWVY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerService/DeleteService?id=7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerService",
+								"DeleteService"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddDoctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTc0MzYsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.zsFeoZ65jENOescYFxUk4h09Kw-T-y0AMmmra_bvWVY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\"test\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerService/AddDoctor?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerService",
+								"AddDoctor"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteDoctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIyNTc0MzYsImlzcyI6InlvdXJfaXNzdWVyX2hlcmUiLCJhdWQiOiJ5b3VyX2F1ZGllbmNlX2hlcmUifQ.zsFeoZ65jENOescYFxUk4h09Kw-T-y0AMmmra_bvWVY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7289/api/v1/ControllerService/DeleteDoctor?id=1&idDoctor=3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7289",
+							"path": [
+								"api",
+								"v1",
+								"ControllerService",
+								"DeleteDoctor"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "idDoctor",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
