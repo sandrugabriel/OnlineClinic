@@ -8,9 +8,9 @@ namespace OnlineClinic.Appointments.Dto
     {
         public int Id { get; set; }
 
-        public ServiceResponse Service { get; set; }
+        public ServiceResponseForAppointment Service { get; set; }
 
-        public DoctorResponse Doctor { get; set; }
+        public DoctorResponseForAppointment Doctor { get; set; }
 
         public double TotalAmount { get; set; }
     }

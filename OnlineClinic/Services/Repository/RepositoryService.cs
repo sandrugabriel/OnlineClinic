@@ -118,9 +118,9 @@ namespace OnlineClinic.Services.Repository
             var service = await _context.Services.Include(s => s.Doctors).ThenInclude(ds => ds.Doctor).Include(s => s.Appointments).FirstOrDefaultAsync(s => s.Id == id);
 
             service.Name = updateRequest.Name ?? service.Name;
-            service.Price = updateRequest.Price;
-            service.Description = updateRequest.Descriptions;
-            service.Time = updateRequest.Time;
+            service.Price = updateRequest.Price ?? service.Price;
+            service.Description = updateRequest.Descriptions ?? service.Description;
+            service.Time = updateRequest.Time ?? service.Time;
 
             _context.Services.Update(service);
 
