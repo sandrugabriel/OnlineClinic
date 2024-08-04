@@ -7,5 +7,7 @@ namespace OnlineClinic.Appointments.Services.interfaces
         Task<List<AppointmentResponse>> GetAllAsync();
 
         Task<AppointmentResponse> GetByIdAsync(int id);
+
+        Task<List<string>> GetAvailableTimes(string nameDoctor, TimeSpan startHour, TimeSpan endHour);
     }
 }

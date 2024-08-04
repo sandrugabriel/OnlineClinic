@@ -1,4 +1,5 @@
-﻿using OnlineClinic.Customers.Dto;
+﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+using OnlineClinic.Customers.Dto;
 
 namespace OnlineClinic.Customers.Services.interfaces
 {
@@ -10,7 +11,7 @@ namespace OnlineClinic.Customers.Services.interfaces
 
         Task<CustomerResponse> DeleteCustomer(int id);
 
-        Task<CustomerResponse> AddAppointment(int id, int idDoctor, string nameService);
+        Task<CustomerResponse> AddAppointment(int id, int idDoctor, string nameService, string appointmentDate);
 
         Task<CustomerResponse> DeleteAppointment(int id, int idAppointment);
 

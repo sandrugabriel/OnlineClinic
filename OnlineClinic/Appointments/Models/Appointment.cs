@@ -32,6 +32,9 @@ namespace OnlineClinic.Appointments.Models
         public virtual Doctor Doctor { get; set; }
 
         [Required]
+        public DateTime AppointmentDate { get; set; }
+
+        [Required]
         public double TotalAmount { get; set; }
 
 

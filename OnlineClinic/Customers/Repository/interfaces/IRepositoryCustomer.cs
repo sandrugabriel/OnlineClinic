@@ -23,7 +23,7 @@ namespace OnlineClinic.Customers.Repository.interfaces
 
         Task<CustomerResponse> DeleteCustomer(int id);
 
-        Task<CustomerResponse> AddAppointment(int id, Service service, Doctor doctor);
+        Task<CustomerResponse> AddAppointment(int id, Service service, Doctor doctor, DateTime appointmentDate);
 
         Task<CustomerResponse> DeleteAppointment(int id, Appointment appointment);
 
