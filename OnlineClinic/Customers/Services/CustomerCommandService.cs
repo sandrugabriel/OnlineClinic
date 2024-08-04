@@ -1,4 +1,6 @@
-﻿using OnlineClinic.Appointments.Repositoy.interfaces;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.SqlServer.Server;
+using OnlineClinic.Appointments.Repositoy.interfaces;
 using OnlineClinic.Customers.Dto;
 using OnlineClinic.Customers.Repository.interfaces;
 using OnlineClinic.Customers.Services.interfaces;
@@ -6,6 +8,7 @@ using OnlineClinic.Doctors.Repository.interfaces;
 using OnlineClinic.Services.Repository.interfaces;
 using OnlineClinic.System.Constants;
 using OnlineClinic.System.Exceptions;
+using System.Globalization;
 
 namespace OnlineClinic.Customers.Services
 {
@@ -68,7 +71,7 @@ namespace OnlineClinic.Customers.Services
             return customer;
         }
 
-        public async Task<CustomerResponse> AddAppointment(int id,int idDoctor, string nameService)
+        public async Task<CustomerResponse> AddAppointment(int id,int idDoctor, string nameService, string appointmentDate)
         {
             var customer = await _repo.GetByIdAsync(id);
 
@@ -87,9 +90,11 @@ namespace OnlineClinic.Customers.Services
 
             var doctor = await _repoOptio.GetById(idDoctor);
 
-
-            customer = await _repo.AddAppointment(id, service1, doctor);
-
+            if(_repoAppointment.GetAvailableTimes(doctor.Name,new TimeSpan(8,0,0), new TimeSpan(17, 0, 0)).Result.FirstOrDefault(a=>a == appointmentDate) == null)
+            {
+                throw new UnavailableTime(Constants.UnavailableTime);
+            }
+            customer = await _repo.AddAppointment(id, service1, doctor, DateTime.ParseExact(appointmentDate, "dd-MM-yyyy HH:mm", CultureInfo.InvariantCulture));
             return customer;
         }
 

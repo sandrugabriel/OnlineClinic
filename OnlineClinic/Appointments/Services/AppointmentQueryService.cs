@@ -30,5 +30,13 @@ namespace OnlineClinic.Appointments.Services
 
             return appointment;
         }
+
+        public async Task<List<string>> GetAvailableTimes(string nameDoctor, TimeSpan startHour, TimeSpan endHour)
+        {
+            var dateTimes = await _repo.GetAvailableTimes(nameDoctor,startHour,endHour);
+
+            return dateTimes;
+        }
+
     }
 }

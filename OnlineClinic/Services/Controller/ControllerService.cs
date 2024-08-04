@@ -112,7 +112,7 @@ namespace OnlineClinic.Services.Controller
         }
 
         [Authorize]
-        public override async Task<ActionResult<ServiceResponse>> AddDoctor([FromQuery] int id, [FromBody] string name)
+        public override async Task<ActionResult<ServiceResponse>> AddDoctor([FromQuery] int id, [FromQuery] string name)
         {
             try
             {

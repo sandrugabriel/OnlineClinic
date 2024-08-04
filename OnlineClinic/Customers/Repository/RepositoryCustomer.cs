@@ -87,7 +87,7 @@ namespace OnlineClinic.Customers.Repository
             return _mapper.Map<CustomerResponse>(customer);
         }
 
-        public async Task<CustomerResponse> AddAppointment(int id, Service service, Doctor doctor)
+        public async Task<CustomerResponse> AddAppointment(int id, Service service, Doctor doctor, DateTime appointmentDate)
         {
             var customer = await _context.Customers.Include(s => s.Appointments).Include(s => s.Appointments).ThenInclude(s => s.Service).FirstOrDefaultAsync(s => s.Id == id);
 
@@ -99,6 +99,7 @@ namespace OnlineClinic.Customers.Repository
             appointment.Service = service;
             appointment.ServiceId = service.Id;
             appointment.TotalAmount = service.Price;
+            appointment.AppointmentDate = appointmentDate;
 
             var appointmentResponse = _mapper.Map<AppointmentResponseCustomer>(appointment);
 

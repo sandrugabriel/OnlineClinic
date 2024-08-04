@@ -42,7 +42,7 @@ namespace OnlineClinic.Services.Controller.interfaces
         [HttpPut("AddDoctor")]
         [ProducesResponseType(statusCode: 201, type: typeof(ServiceResponse))]
         [ProducesResponseType(statusCode: 400, type: typeof(string))]
-        public abstract Task<ActionResult<ServiceResponse>> AddDoctor([FromQuery] int id, [FromBody] string name);
+        public abstract Task<ActionResult<ServiceResponse>> AddDoctor([FromQuery] int id, [FromQuery] string name);
 
         [HttpPut("DeleteDoctor")]
         [ProducesResponseType(statusCode: 201, type: typeof(ServiceResponse))]

@@ -101,6 +101,7 @@ namespace OnlineClinic.Data.Migrations
              .WithColumn("CustomerId").AsInt32().ForeignKey("Customers", "Id").NotNullable()
              .WithColumn("ServiceId").AsInt32().ForeignKey("Services", "Id").NotNullable()
              .WithColumn("DoctorId").AsInt32().ForeignKey("Doctors", "Id").NotNullable()
+             .WithColumn("AppointmentDate").AsDateTime().NotNullable()
              .WithColumn("TotalAmount").AsDouble().NotNullable();
 
                Create.Table("DoctorServices")

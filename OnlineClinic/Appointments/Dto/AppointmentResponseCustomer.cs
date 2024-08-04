@@ -12,6 +12,8 @@ namespace OnlineClinic.Appointments.Dto
 
         public DoctorResponseForAppointment Doctor { get; set; }
 
+        public DateTime AppointmentDate { get; set; }
+
         public double TotalAmount { get; set; }
     }
 }

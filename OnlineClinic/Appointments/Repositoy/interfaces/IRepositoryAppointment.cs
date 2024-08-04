@@ -8,5 +8,6 @@ namespace OnlineClinic.Appointments.Repositoy.interfaces
 
         Task<AppointmentResponse> GetByIdAsync(int id);
 
+        Task<List<string>> GetAvailableTimes(string nameDoctor,TimeSpan startHour, TimeSpan endHour);
     }
 }

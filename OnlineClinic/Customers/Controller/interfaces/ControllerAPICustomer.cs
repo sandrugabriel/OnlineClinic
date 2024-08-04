@@ -33,7 +33,6 @@ namespace OnlineClinic.Customers.Controller.interfaces
         [ProducesResponseType(statusCode: 400, type: typeof(string))]
         public abstract Task<ActionResult<CustomerResponse>> LoginCustomer([FromBody] LoginRequest request);
 
-
         [HttpPut("UpdateCustomer")]
         [ProducesResponseType(statusCode: 200, type: typeof(CustomerResponse))]
         [ProducesResponseType(statusCode: 400, type: typeof(string))]
@@ -45,11 +44,16 @@ namespace OnlineClinic.Customers.Controller.interfaces
         [ProducesResponseType(statusCode: 404, type: typeof(string))]
         public abstract Task<ActionResult<CustomerResponse>> DeleteCustomer([FromQuery] int id);
 
+        [HttpGet("AvailableTimesDoctor")]
+        [ProducesResponseType(statusCode: 200, type: typeof(List<DateTime>))]
+        [ProducesResponseType(statusCode: 400, type: typeof(String))]
+        public abstract Task<ActionResult<List<string>>> GetAvailableTimesDoctor([FromQuery] string nameDoctor);
+
         [HttpPut("AddAppointment")]
         [ProducesResponseType(statusCode: 200, type: typeof(CustomerResponse))]
         [ProducesResponseType(statusCode: 400, type: typeof(string))]
         [ProducesResponseType(statusCode: 404, type: typeof(string))]
-        public abstract Task<ActionResult<CustomerResponse>> AddAppointment([FromQuery] int id, [FromQuery] int idDoctor, [FromQuery] string nameService);
+        public abstract Task<ActionResult<CustomerResponse>> AddAppointment([FromQuery] int id, [FromQuery] int idDoctor, [FromQuery] string nameService, [FromQuery] string appointmentDate);
 
         [HttpPut("DeleteAppointment")]
         [ProducesResponseType(statusCode: 200, type: typeof(CustomerResponse))]
